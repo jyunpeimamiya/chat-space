@@ -13,7 +13,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text |text|
+|name|string|
 
 ### Association
 has_many:comments
@@ -26,7 +26,7 @@ has_many:users,through:groups_users
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|pass|string|null: false|
+|password|string|null: false|
 |name|string|null: false|
 
 ### Association
