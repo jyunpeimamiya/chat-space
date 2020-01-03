@@ -14,10 +14,9 @@
             =icon('fas','cog',class:'icon')
       
   .side-bar__group
-    - current_user.groups.each do |group|
-      .group
-        = link_to '#' do
-          .group__name
-            = group.name
-          .group__message
-            メッセージはまだありません。
+    =link_to "#",class:"side-bar__group__list" do
+      .side-bar__group__list
+        %p.side-bar__group__list__name
+          techcamp
+        %p.side-bar__group__list__message
+          まだメッセージがありません
