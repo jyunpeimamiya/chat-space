@@ -13,11 +13,11 @@
           =link_to edit_user_path(current_user) do
             =icon('fas','cog',class:'icon')
       
-  .groups
+  .side-bar__group
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
-          %P.group__name
+        = link_to group_messages_path(group) do
+          .group__name
             = group.name
-          %p.group__message
-            メッセージはまだありません。
+          .group__message
+            = group.show_last_message
