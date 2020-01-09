@@ -108,99 +108,82 @@
     }
 
 }
-  &__message-list{
+
+  .messages{
     background-color: #fafafa;
-    width: calc(100vw - 300px);
+    overflow: scroll;
     height: calc(100vh - 190px);
-    padding-left: 40px;
+    padding:46px 40px;
+    .message{
+      padding-bottom: 40px;
+   
 
-    &__one{
-      padding-top: 35px;
-      display: flex;
-      justify-content: flex-start;
+      .upper-message{
+        margin-bottom: 10px;
+        display: flex;
+        &__user-name{
+          font-size: 16px;
+          color: #333333;
+        
+        }
 
-      &__name{
-        font-size: 16px;
-        color: #333333;
-        margin-bottom: 12px;
-      }
+        &__date{
+          font-size: 16px;
+          color: #999999;
+          margin-left: 10px;
+        }
 
-      &__date{
-        font-size: 16px;
-        color: #999999;
-        margin-left: 10px;
-      }
-
-    &__text{
-        font-size: 14px;
-        color: #434A54;
-      }
+      .lower-message{
+          font-size: 14px;
+          color: #434A54;
+          margin-bottom: 10px;
+          }
+        }
     }
-
-    &__two{
-      padding-top: 46px;
-      display: flex;
-      justify-content: flex-start;
-
-      &__names{
-        margin-bottom: 12px;
-        font-size: 16px;
-        color: #333333;
-      }
-
-      &__dates{
-        font-size: 16px;
-        color: #999999;
-        margin-left: 10px;
-      }
-
-    &__texts{
-        font-size: 14px;
-        color: #434A54;
-      }
-    }
- }
- 
+  }
   .form{
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-  
-    form{
-      display: flex; 
-      .input-box{
-
-        display: flex;
-        width: 100%;
-        position: relative;
-        &__text{
+    .new_message{
+      display: flex;
+      position: relative;
+        .form__message{
           height: 50px;
           width: 100%;
+          padding: 0 40px 0 10px;
           color: #434a54;
           border-style: none;
-          padding: 0 40px 0;
-          }
-        &__image{
+        }
+        .form__mask{
+          position: absolute;
+          right: 120px;
+        .form__mask__image{
+          font-size: 1.3rem;
           position: absolute;
           top: 10px;
           right: 10px;
           cursor: pointer;
-          font-size: 1.3rem;
-
-          &__file{
-            display: none;
+          .icon{
+            display: inline-block;
+            font-size: inherit;
+            text-rendering: auto;
+          }
+            .hidden{
+              display: none;
             }
           }
         }
-        
-      .submit-btn{
+
+      .form__submit{
         width: 100px;
         height: 50px;
         padding: 0 30px;
         margin-left: 15px;
         color: white;
         background-color: #38aef0;
-      }
+        cursor: pointer;
+        }
+    }
+    }
   }
-}
-}
