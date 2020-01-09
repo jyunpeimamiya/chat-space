@@ -41,7 +41,6 @@ $(function(){
  }
 $('.new_message').on('submit', function(e){
  e.preventDefault();
- console.log('a')
  var formData = new FormData(this);
  var url = $(this).attr('action')
  $('.form__submit').removeAttr('data-disable-with');
@@ -62,6 +61,6 @@ $('.new_message').on('submit', function(e){
   })
   .fail(function() {
     alert("メッセージ送信に失敗しました");
-});
-})
-});
+  });
+  })
+  });
