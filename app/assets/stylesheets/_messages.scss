@@ -73,23 +73,29 @@
   float: left;
 
   &__message-info{
-    background-color: #ffffff;
-    width: calc(100vw - 300px);
     height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
 
     &__group{
-      padding-left: 40px;
-      padding-top: 35px;
-      float: left;
+      margin-top: 35px;
       
       &__text{
-       padding-bottom: 15px;
-       font-size: 15px;
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
       }
-      &__member{
+      &__members{
+        display: flex;
         font-size: 12px;
         color: #999999;
-      }
+        &__member{
+          margin-left: 0.3rem;
+        }
+    }
     }
     &__edit{
       float: right;
