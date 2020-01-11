@@ -3,9 +3,11 @@
     .chat-main__message-info__group
       %p.chat-main__message-info__group__text
         = @group.name
-      - @group.users.each do |user|
-        %p.chat-main__message-info__group__member
-          = user.name
+      %ul.chat-main__message-info__group__members
+        = "Menber:"
+        - @group.users.each do |user|
+          %p.chat-main__message-info__group__members__member
+            = user.name
           
     .chat-main__message-info__edit
       =link_to edit_group_path(current_user) do
