@@ -83,9 +83,6 @@ $('.new_message').on('submit', function(e){
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       }
     })
-    .fail(function() {
-      alert("メッセージ送信に失敗しました");
-    });
   };
   setInterval(reloadMessages, 7000);
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
